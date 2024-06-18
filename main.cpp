@@ -17,6 +17,24 @@ int main()
 				window.close();
 			}
 		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
+		{
+			player.move(0.0f, -0.1f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+		{
+			player.move(0.0f, 0.1f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
+		{
+			player.move(-0.1f, 0.0f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+		{
+			player.move(0.1f, 0.0f);
+		}
+
+		window.clear();
 		window.draw(player);
 		window.display();
 	}
